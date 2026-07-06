@@ -18,7 +18,7 @@ jobs:
     - name: building dokcer
       run:  docker build -t myproject .
     - name: tagging docker
-      run:  docker tag myproject amir096/myproject:latestt
+      run:  docker tag myproject amir096/myproject:latest
 
     - name: pushing container
       run:  docker push amir096/myproject:latest
