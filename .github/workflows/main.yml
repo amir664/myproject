@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest  
     steps:
     - name: copy project
-      run: actions/checkout@v4
+      run:  actions/checkout@v4
     - name: docker-login
       uses: docker/login-action@v3
       with:
@@ -17,10 +17,10 @@ jobs:
          password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: tagging docker
-      run: docker tag myproject:latest amir096/myproject:latest
+      run:  docker tag myproject:latest amir096/myproject:latest
 
     - name: pushing container
-      run: docker push amir096/myproject:latest
+      run:  docker push amir096/myproject:latest
 
     - name: Deployment on azure
       uses: azure/webapps-deploy@v3
