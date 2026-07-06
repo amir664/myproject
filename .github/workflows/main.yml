@@ -17,7 +17,7 @@ jobs:
          password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: tagging docker
-      run:  docker tag myproject:latest amir096/myproject:latest
+      run:  docker tag myproject  amir096/myproject:latest
 
     - name: pushing container
       run:  docker push amir096/myproject:latest
